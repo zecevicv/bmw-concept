@@ -1521,6 +1521,7 @@ p span {
   .s8 {
     padding: 0 0 150px 0;
     background-position: bottom;
+    background-size: contain;
   }
 
   .s8 .container-lg {
