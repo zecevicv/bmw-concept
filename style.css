@@ -615,7 +615,7 @@ p span {
 @media (max-width: 1600px) {
   .footer-top {
     margin-left: auto;
-    padding: 60px 45px;
+    padding: 60px 15px;
     position: relative;
     box-shadow: none;
   }
@@ -636,7 +636,7 @@ p span {
 
 @media (max-width: 1439.98px) {
   .footer-top {
-    padding: 35px 45px;
+    padding: 35px 15px;
   }
 
   .footer-top .nav li:not(:last-child) {
@@ -664,7 +664,7 @@ p span {
 
 @media (max-width: 575.98px) {
   .footer-top {
-    padding: 25px 45px;
+    padding: 25px 15px;
   }
 }
 
@@ -708,6 +708,10 @@ p span {
 }
 
 @media (max-width: 1600px) {
+  .footer-bottom {
+    padding: 75px 15px 75px 15px;
+  }
+
   .footer-bottom  {
     margin-right: auto;
     position: relative;
@@ -728,7 +732,7 @@ p span {
 
 @media (max-width: 1439.98px) {
   .footer-bottom {
-    padding: 50px 45px;
+    padding: 50px 15px;
   }
 }
 
@@ -820,12 +824,13 @@ p span {
 @media (max-width: 1600px) {
   .copyright  {
     margin-right: auto;
+    padding: 35px 15px 35px 15px;
   }
 }
 
 @media (max-width: 1439.98px) {
   .copyright {
-    padding: 30px 45px;
+    padding: 30px 15px;
   }
 }
 
