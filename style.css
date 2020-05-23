@@ -568,7 +568,7 @@ p span {
   background-color: var(--gray-2);
   border-radius: 0;
   position: absolute;
-  transition-property: transform;
+  transition-property: transform, width;
   transition-duration: 0.15s;
   transition-timing-function: ease;
 }
