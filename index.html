@@ -55,9 +55,10 @@
     <section class="m8">
       <!-- M8 Top -->
       <div class="m8-top">
-        <div class="img">
+        <div class="img img-reveal">
           <img src="img/m8/1.jpg" alt="bmw-m8-img">
           <img src="img/m8/1-m.jpg" alt="bmw-m8-img">
+          <span class="overlay"></span>
         </div>
         <div class="text">
           <h4>Innovative Technology</h4>
@@ -76,9 +77,11 @@
               <button class="btn">View Details</button>
             </div>
           </div>
-          <div class="img box-shadow">
+          <div class="img img-reveal">
             <img src="img/m8/2.jpg" alt="bmw-m8-img">
+            <span class="overlay"></span>
           </div>
+          <span class="blue-line"></span>
         </div>
       </div>
     </section>
@@ -88,24 +91,30 @@
       <!-- Main -->
       <div class="main">
         <!-- Bg Image -->
-        <div class="bg-img">
+        <div class="bg-img img-reveal">
           <img src="img/i-vision/bg.jpg" alt="bg-img">
+          <span class="overlay"></span>
         </div>
         <!-- Text Content -->
         <div class="container">
-          <h4>Electrifying Driving Pleasure</h4>
-          <h2>BMW <span class="text-blue">I</span> VISION DYNAMICS</h2>
-          <p><span>The BMW Group</span> offers a clear image of electric mobility of the near future with the world premiere of the <span>BMW i Vision Dynamics.</span></p>
-          <button class="btn">View Details</button>
+          <div class="text">
+            <h4>Electrifying Driving Pleasure</h4>
+            <h2>BMW <span class="text-blue">I</span> VISION DYNAMICS</h2>
+            <p><span>The BMW Group</span> offers a clear image of electric mobility of the near future with the world premiere of the <span>BMW i Vision Dynamics.</span></p>
+            <button class="btn">View Details</button>
+          </div>
+          <span class="blue-line"></span>
         </div>
       </div>
       <!-- Images -->
       <div class="images">
-        <div class="img">
+        <div class="img img--1 img-reveal">
           <img src="img/i-vision/1.jpg" alt="bmw-i-vision-img">
+          <span class="overlay"></span>
         </div>
-        <div class="img">
+        <div class="img img--2 img-reveal">
           <img src="img/i-vision/2.jpg" alt="bmw-i-vision-img">
+          <span class="overlay"></span>
         </div>
       </div>
       <!-- Mobile Bottom Image -->
@@ -126,14 +135,17 @@
       <!-- Images -->
       <div class="images">
         <div class="container-lg">
-          <div class="img">
+          <div class="img img--1 img-reveal">
             <img src="img/x7/1.jpg" alt="bmx-x7-img">
+            <span class="overlay"></span>
           </div>
-          <div class="img box-shadow">
+          <div class="img img--2 img-reveal box-shadow">
             <img src="img/x7/2.jpg" alt="bmx-x7-img">
+            <span class="overlay"></span>
           </div>
-          <div class="img">
+          <div class="img img--3 img-reveal">
             <img src="img/x7/3.jpg" alt="bmx-x7-img">
+            <span class="overlay"></span>
           </div>
         </div>
       </div>
@@ -154,19 +166,23 @@
         <!-- Images -->
         <div class="images">
           <div class="img-gallery">
-            <div class="img">
+            <div class="img img-reveal">
               <img src="img/s8/1.jpg" alt="bmw-8-series-img">
+              <span class="overlay"></span>
             </div>
           </div>
           <div class="img-thumbs">
-            <div class="img box-shadow">
+            <div class="img img-reveal box-shadow">
               <img src="img/s8/2.jpg" alt="bmw-8-series-img">
+              <span class="overlay"></span>
             </div>
-            <div class="img box-shadow">
+            <div class="img img-reveal box-shadow">
               <img src="img/s8/3.jpg" alt="bmw-8-series-img">
+              <span class="overlay"></span>
             </div>
-            <div class="img box-shadow">
+            <div class="img img-reveal box-shadow">
               <img src="img/s8/4.jpg" alt="bmw-8-series-img">
+              <span class="overlay"></span>
             </div>
           </div>
         </div>
@@ -185,8 +201,9 @@
       <!-- Main -->
       <div class="main">
         <!-- Bg Image -->
-        <div class="bg-img">
+        <div class="bg-img img-reveal">
           <img src="img/z4/bg.jpg" alt="bg-img">
+          <span class="overlay"></span>
         </div>
         <!-- Text Content -->
         <div class="text">
@@ -198,11 +215,13 @@
       </div>
       <!-- Images -->
       <div class="images">
-        <div class="img">
+        <div class="img img--1 img-reveal">
           <img src="img/z4/1.jpg" alt="bmw-z4-img">
+          <span class="overlay"></span>
         </div>
-        <div class="img box-shadow">
+        <div class="img img--2 img-reveal box-shadow">
           <img src="img/z4/2.jpg" alt="bmw-z4-img">
+          <span class="overlay"></span>
         </div>
       </div>
     </div>
@@ -283,7 +302,17 @@
 
   </div><!-- End Page Wrapper -->
 
+  <!-- Loader -->
+  <div class="loader">
+    <div>
+      <img src="img/logo.svg" alt="bmw-logo">
+      <span class="loader-icon"></span>
+      <p>Loading...</p>
+    </div>
+  </div>
+
   <!-- JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha256-XJuslujM3cGzRZGiSi/KNSdk58uORO/mmrEQNjVtb5k=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
   <script src="main.js"></script>
 </body>
