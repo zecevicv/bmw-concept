@@ -34,7 +34,7 @@ window.addEventListener('load', (event) => {
     .to('.m8-top .img span', {duration:.8, ease: 'power2.inOut', x: "-100%"}, "<")
     .from('.m8-top .img img', {duration:.8, ease: 'power2.inOut', scale: 1.4}, "<")
     .from('.m8-top .text > *', {duration: .5, ease: 'power1', opacity: 0, x: -50, stagger: .1}, "<")
-    .from('.m8-bottom .blue-line', {duration:.8, ease: 'power2.inOut', x: "35%", width: 0, opacity: 0}, "<")
+    .from('.m8-bottom .blue-line', {duration:.8, ease: 'power2.inOut', width: 0, opacity: 0}, "<")
     .from('.m8-bottom .img', {duration:.8, ease: 'power2.inOut', opacity: 0}, "<")
     .to('.m8-bottom .img span', {duration:.8, ease: 'power2.inOut', x: "100%"}, "<")
     .from('.m8-bottom .img img', {duration:.8, ease: 'power2.inOut', scale: 1.4}, "<")
@@ -56,10 +56,10 @@ window.addEventListener('load', (event) => {
     .from('.i-vision .bg-img', {duration: 1, ease: 'power2.inOut', opacity: 0}, "<")
     .to('.i-vision .bg-img span', {duration: 1, ease: 'power2.inOut', x: "100%"}, "<")
     .from('.i-vision .bg-img img', {duration: 1, ease: 'power2.inOut', scale: 1.4}, "<")
-    .from('.i-vision .img--1 img', {duration: 1, ease: 'power2.inOut', x: "-100%", opacity: .5}, "<")
-    .from('.i-vision .img--2 img', {duration: 1, ease: 'power2.inOut', x: "100%", opacity: .5}, "<")
-    .from('.i-vision .text > *', {duration: .5, ease: 'power1.out', opacity: 0, x: 50, stagger: .1}, "<")
-    .from('.i-vision .blue-line', {duration: 1, ease: 'power2.inOut', width: 0}, "<")
+    .from('.i-vision .img--1 img', {duration: .6, ease: 'power2.out', x: "-100%", opacity: .5}, "-=.5")
+    .from('.i-vision .img--2 img', {duration: .6, ease: 'power2.out', x: "100%", opacity: .5}, "<")
+    .from('.i-vision .text > *', {duration: .3, ease: 'power1.out', opacity: 0, x: 50, stagger: .1}, "<")
+    .from('.i-vision .blue-line', {duration: .6, ease: 'power2.inOut', width: 0}, "<")
     const iVisionWaypoint = new Waypoint({
       element: document.querySelector('.i-vision'),
       handler: () => {
@@ -115,8 +115,8 @@ window.addEventListener('load', (event) => {
     z4.from('.z4 .bg-img', {duration: 1, ease: 'power2.inOut', opacity: 0}, "<")
     z4.to('.z4 .bg-img span', {duration: 1, ease: 'power2.inOut', x: "-100%"}, "<")
     z4.from('.z4 .bg-img img', {duration: 1, ease: 'power2.inOut', scale: 1.4}, "<")
-    z4.from('.z4 .img--2 img', {duration: .8, ease: 'power2.inOut', x: "100%", opacity: .5}, "-=.9")
-    z4.from('.z4 .img--1 img', {duration: .8, ease: 'power2.inOut', x: "100%", opacity: .5}, "-=.7")
+    z4.from('.z4 .img--2 img', {duration: .6, ease: 'power2.out', x: "100%", opacity: .5}, "-=.6")
+    z4.from('.z4 .img--1 img', {duration: .6, ease: 'power2.out', x: "100%", opacity: .5}, "-=.4")
     z4.from('.z4 .text > *', {duration: .5, ease: 'power1.out', opacity: 0, x: -50, stagger: .1}, "-=.8")
     const z4Waypoint = new Waypoint({
       element: document.querySelector('.z4'),
@@ -129,7 +129,7 @@ window.addEventListener('load', (event) => {
   
     // Footer Animation
     const footer = gsap.timeline({paused: true});
-    footer.from('.footer .container-lg > *', {duration: .75, ease: 'power0', opacity: 0, stagger: .2});
+    footer.from('.footer .container-lg > *', {duration: .5, ease: 'power0', opacity: 0, stagger: .25});
     const footerWaypoint = new Waypoint({
       element: document.querySelector('.footer'),
       handler: () => {

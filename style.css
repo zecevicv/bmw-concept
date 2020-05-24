@@ -1326,7 +1326,7 @@ p span {
   position: absolute;
   top: 0;
   right: 6%;
-  width: 43%;
+  width: 37%;
 }
 
 .i-vision .images .img:first-child::after {
@@ -1344,8 +1344,8 @@ p span {
 .i-vision .images .img:last-child {
   position: absolute;
   z-index: 1;
-  top: 50%;
-  right: 25%;
+  top: 47%;
+  right: 24%;
   width: 30%;
 }
 
@@ -1485,6 +1485,17 @@ p span {
 @media (max-width: 1439.98px) {
   .x7 .images {
     margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .x7 .img--1,
+  .x7 .img--3 {
+    flex: 0 0 30%;
+  }
+
+  .x7 .img--2 {
+    flex-grow: 1;
   }
 }
 
