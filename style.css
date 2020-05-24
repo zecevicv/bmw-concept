@@ -970,6 +970,10 @@ p span {
   z-index: 1;
 }
 
+.m8 .m8-top .text > * {
+  backface-visibility: hidden;
+}
+
 .m8 h3 {
   margin-bottom: 55px;
 }

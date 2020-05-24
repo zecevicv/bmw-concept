@@ -28,11 +28,11 @@ window.addEventListener('load', (event) => {
     .from('.m8-top .img', {duration:.8, ease: 'power2.inOut', opacity: 0}, "<")
     .to('.m8-top .img span', {duration:.8, ease: 'power2.inOut', left: "-100%"}, "<")
     .from('.m8-top .img img', {duration:.8, ease: 'power2.inOut', scale: 1.4}, "<")
-    .from('.m8-top .text > *', {duration: .4, ease: 'power1.out', opacity: 0, x: -20, stagger: .1}, "<")
+    .from('.m8-top .text > *', {duration: .5, ease: 'power1', opacity: 0, x: -50, stagger: .1}, "<")
+    .from('.m8-bottom .blue-line', {duration:.8, ease: 'power2.inOut', left: "35%", width: 0, opacity: 0}, "<")
     .from('.m8-bottom .img', {duration:.8, ease: 'power2.inOut', opacity: 0}, "<")
     .to('.m8-bottom .img span', {duration:.8, ease: 'power2.inOut', left: "100%"}, "<")
     .from('.m8-bottom .img img', {duration:.8, ease: 'power2.inOut', scale: 1.4}, "<")
-    .from('.m8-bottom .blue-line', {duration:.8, ease: 'power2.inOut', left: "100%", width: 0, opacity: 0}, "-=.85")
     .from('.m8-bottom .text', {duration:.5, ease: 'power2.inOut', opacity: 0}, "<")
     const headerWaypoint = new Waypoint({
       element: document.querySelector('.header'),
@@ -63,7 +63,7 @@ window.addEventListener('load', (event) => {
         iVisionAnimation.play();
         iVisionWaypoint.destroy();
       },
-      offset: '60%'
+      offset: '70%'
     })
   
     // X7 Animation
@@ -117,14 +117,14 @@ window.addEventListener('load', (event) => {
     z4.from('.z4 .img--1', {duration: 1, ease: 'power2.inOut', opacity: 0}, "-=1")
     z4.to('.z4 .img--1 span', {duration: 1, ease: 'power2.inOut', left: "-100%"}, "<")
     z4.from('.z4 .img--1 img', {duration: 1, ease: 'power2.inOut', scale: 1.4}, "<")
-    z4.from('.z4 .text > *', {duration: 1, ease: 'power1.out', opacity: 0, x: -50, stagger: .1}, "-=.8")
+    z4.from('.z4 .text > *', {duration: .5, ease: 'power1.out', opacity: 0, x: -50, stagger: .1}, "-=.8")
     const z4Waypoint = new Waypoint({
       element: document.querySelector('.z4'),
       handler: () => {
         z4.play();
         z4Waypoint.destroy();
       },
-      offset: '60%'
+      offset: '70%'
     });
   
     // Footer Animation
@@ -136,8 +136,12 @@ window.addEventListener('load', (event) => {
         footer.play();
         footerWaypoint.destroy();
       },
-      offset: '60%'
+      offset: '70%'
     });
+  } else {
+    gsap.timeline()
+    .from('.header', {duration: 1, ease: 'power2.inOut', opacity: 0, delay: 1.5})
+    .from('.page-wrapper', {duration: 1, ease: 'power2.inOut', opacity: 0}, "<");
   }
 
   /* #Mobile menu
