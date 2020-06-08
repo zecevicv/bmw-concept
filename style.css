@@ -209,11 +209,30 @@ h1 {
   max-width: 650px;
   margin-left: auto;
   line-height: 1;
+  overflow: hidden;
+}
+
+h1 div {
+  overflow: hidden;
+}
+
+h1 span {
+  display: block;
+  backface-visibility: hidden;
 }
 
 h2 {
   font-size: 65px;
   line-height: 1.1;
+}
+
+h2 div {
+  overflow: hidden;
+}
+
+h2 div > span {
+  display: block;
+  backface-visibility: hidden;
 }
 
 h3 {
@@ -632,6 +651,15 @@ p span {
   margin-top: 50px;
 }
 
+.footer .container-lg > * {
+  /* overflow: hidden;  */
+}
+
+.footer .container-lg > div:first-child {
+  position: relative;
+  z-index: 1;
+}
+
 @media (min-width: 1601px) {
   .footer .container {
     max-width: 1450px;
@@ -662,7 +690,7 @@ p span {
   align-items: center;
   padding: 60px 50px 60px 140px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .footer-top .nav {
@@ -1082,14 +1110,20 @@ p span {
 }
 
 .m8 .m8-bottom .blue-line {
-  content: '';
   display: block;
-  width: 63%;
-  height: 10px;
-  background-color: var(--blue);
   position: absolute;
   top: 0;
   left: 15px;
+  height: 10px;
+  width: 63%;
+  overflow: hidden;
+}
+
+.m8 .m8-bottom .blue-line span {
+  display: block;
+  width: 100%;
+  background-color: var(--blue);
+  height: 10px;
 }
 
 .m8 .m8-bottom .img {

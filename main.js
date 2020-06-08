@@ -24,42 +24,32 @@ window.addEventListener('load', (event) => {
 
   // Show animaitons only on desktop
   if (window.innerWidth > 992) {
-    gsap.set('.img-reveal span', {display: "block"});
-
     // Header Animation
+    gsap.set('.m8-top .img-reveal span', {display: "block"});
     const header = gsap.timeline({paused: true});
     header
-    .from('.header', {duration: 1, ease: 'power2.inOut', opacity: 0, delay: 1.5})
-    .from('.m8-top .img', {duration:.8, ease: 'power2.inOut', opacity: 0}, "<")
-    .to('.m8-top .img span', {duration:.8, ease: 'power2.inOut', x: "-100%"}, "<")
-    .from('.m8-top .img img', {duration:.8, ease: 'power2.inOut', scale: 1.4}, "<")
-    .from('.m8-top .text > *', {duration: .5, ease: 'power1', opacity: 0, x: -50, stagger: .1}, "<")
-    .from('.m8-bottom .blue-line', {duration:.8, ease: 'power2.inOut', width: 0, opacity: 0}, "<")
-    .from('.m8-bottom .img', {duration:.8, ease: 'power2.inOut', opacity: 0}, "<")
-    .to('.m8-bottom .img span', {duration:.8, ease: 'power2.inOut', x: "100%"}, "<")
-    .from('.m8-bottom .img img', {duration:.8, ease: 'power2.inOut', scale: 1.4}, "<")
-    .from('.m8-bottom .background', {duration:.5, ease: 'power2.inOut', opacity: 0}, "<")
-    .from('.m8-bottom .text', {duration:.5, ease: 'power2.inOut', opacity: 0}, "<")
+    .from('.header', {duration: 1, ease: 'power1.inOut', opacity: 0, delay: 1.5})
+    .from('.m8', {duration: 1, ease: 'power1.inOut', opacity: 0}, "<")
+    .from('.m8-top .img', {duration:1, ease: 'power1.inOut', opacity: 0}, "<")
+    .to('.m8-top .img span', {duration:1, ease: 'power1.inOut', x: "-100%"}, "<")
+    .from('.m8-top .img img', {duration:1, ease: 'power1.inOut', scale: 1.4}, "<")
+    .from('.m8 h1 span', {duration: .8, ease: 'power1.inOut', opacity: 0, y: "100%", stagger: .2}, "<")
+    .from('.m8-bottom .blue-line span', {duration:.9, ease: 'power1.inOut', x: "100%"}, "-=.8")
     const headerWaypoint = new Waypoint({
       element: document.querySelector('.header'),
       handler: () => {
         header.play();
         headerWaypoint.destroy();
       },
-      offset: '85%'
+      offset: '75%'
     })
   
     // iVision Animation
-    gsap.set('.i-vision .images .img-reveal span', {display: 'none'})
     const iVisionAnimation = gsap.timeline({paused: true});
     iVisionAnimation
-    .from('.i-vision .bg-img', {duration: 1, ease: 'power2.inOut', opacity: 0}, "<")
-    .to('.i-vision .bg-img span', {duration: 1, ease: 'power2.inOut', x: "100%"}, "<")
-    .from('.i-vision .bg-img img', {duration: 1, ease: 'power2.inOut', scale: 1.4}, "<")
-    .from('.i-vision .img--1 img', {duration: .6, ease: 'power2.out', x: "-100%", opacity: .5}, "-=.5")
-    .from('.i-vision .img--2 img', {duration: .6, ease: 'power2.out', x: "100%", opacity: .5}, "<")
-    .from('.i-vision .text > *', {duration: .3, ease: 'power1.out', opacity: 0, x: 50, stagger: .1}, "<")
-    .from('.i-vision .blue-line', {duration: .6, ease: 'power2.inOut', width: 0}, "<")
+    .from('.i-vision h2 div > span', {duration: .8, ease: 'power1.inOut', opacity: 0, y: "100%", stagger: .2}, "<")
+    .from('.i-vision .img--1 img', {duration: 1.1, ease: 'power1.out', x: "-100%", opacity: .5}, "-=.9")
+    .from('.i-vision .img--2 img', {duration: 1.1, ease: 'power1.out', x: "100%", opacity: .5}, "-=.9")
     const iVisionWaypoint = new Waypoint({
       element: document.querySelector('.i-vision'),
       handler: () => {
@@ -70,66 +60,64 @@ window.addEventListener('load', (event) => {
     })
   
     // X7 Animation
+    gsap.set('.x7 .img-reveal span', {display: "block"});
     const x7 = gsap.timeline({paused: true});
-    x7.from('.x7', {duration: 1, ease: 'power2.inOut', opacity: 0}, "<")
-    x7.from('.x7 .img--1', {duration: 1, ease: 'power2.inOut', opacity: 0}, "-=.8")
-    x7.to('.x7 .img--1 span', {duration: 1, ease: 'power2.inOut', x: "-100%"}, "<")
-    x7.from('.x7 .img--1 img', {duration: 1, ease: 'power2.inOut', scale: 1.4}, "<")
-    x7.from('.x7 .img--2', {duration: 1, ease: 'power2.inOut', opacity: 0}, "<")
-    x7.to('.x7 .img--2 span', {duration: 1, ease: 'power2.inOut', top: "100%"}, "<")
-    x7.from('.x7 .img--2 img', {duration: 1, ease: 'power2.inOut', scale: 1.4}, "<")
-    x7.from('.x7 .img--3', {duration: 1, ease: 'power2.inOut', opacity: 0}, "<")
-    x7.to('.x7 .img--3 span', {duration: 1, ease: 'power2.inOut', x: "100%"}, "<")
-    x7.from('.x7 .img--3 img', {duration: 1, ease: 'power2.inOut', scale: 1.4}, "<")
-    x7.from('.x7 .text', {duration: 1, ease: 'power2.inOut', opacity: 0}, "-=.5");
+    x7.from('.x7 h2 span', {duration: 1, ease: 'power1.inOut', opacity: 0, y: "100%", stagger: .2}, "<")
+    x7.from('.x7 .img--1', {duration: 1, ease: 'power1.inOut', opacity: 0}, "-=.7")
+    x7.to('.x7 .img--1 span', {duration: 1, ease: 'power1.inOut', x: "-100%"}, "<")
+    x7.from('.x7 .img--1 img', {duration: 1, ease: 'power1.inOut', scale: 1.2}, "<")
+    x7.from('.x7 .img--2', {duration: 1, ease: 'power1.inOut', opacity: 0}, "<")
+    x7.to('.x7 .img--2 span', {duration: 1, ease: 'power1.inOut', top: "100%"}, "<")
+    x7.from('.x7 .img--2 img', {duration: 1, ease: 'power1.inOut', scale: 1.2}, "<")
+    x7.from('.x7 .img--3', {duration: 1, ease: 'power1.inOut', opacity: 0}, "<")
+    x7.to('.x7 .img--3 span', {duration: 1, ease: 'power1.inOut', x: "100%"}, "<")
+    x7.from('.x7 .img--3 img', {duration: 1, ease: 'power1.inOut', scale: 1.2}, "<")
     const x7Waypoint = new Waypoint({
       element: document.querySelector('.x7'),
       handler: () => {
         x7.play();
         x7Waypoint.destroy();
       },
-      offset: '65%'
+      offset: '75%'
     })
   
     // S8 Animation
+    gsap.set('.s8 .img-reveal span', {display: "block"});
     const s8 = gsap.timeline({paused: true});
-    s8.from('.s8 .img-gallery .img', {duration: 1, ease: 'power2.inOut', opacity: 0})
-    s8.to('.s8 .img-gallery .img span', {duration: 1, ease: 'power2.inOut', x: "-100%"}, "<")
-    s8.from('.s8 .img-gallery .img img', {duration: 1, ease: 'power2.inOut', scale: 1.4}, "<")
-    s8.from('.s8 .text > *', {duration: 1, ease: 'power1.out', opacity: 0, x: -20, stagger: .1}, "<")
-    .from('.s8 .img-thumbs .img', {duration:.8, ease: 'power2.inOut', opacity: 0, stagger: {from: "end", each: .1}}, "-=.9")
-    .to('.s8 .img-thumbs .img span', {duration:.8, ease: 'power2.inOut', top: "100%", stagger: {from: "end", each: .1}}, "<")
-    .from('.s8 .img-thumbs .img img', {duration:.8, ease: 'power2.inOut', scale: 1.4, stagger: {from: "end", each: .1}}, "<");
+    s8.from('.s8 h2 span', {duration: 1, ease: 'power1.inOut', opacity: 0, y: "100%", stagger: .2}, "<")
+    .from('.s8 .img-gallery .img', {duration: 1, ease: 'power1.inOut', opacity: 0}, "<")
+    .to('.s8 .img-gallery .img span', {duration: 1, ease: 'power1.inOut', x: "-100%"}, "<")
+    .from('.s8 .img-gallery .img img', {duration: 1, ease: 'power1.inOut', scale: 1.4}, "<")
+    .from('.s8 .img-thumbs .img', {duration:1.1, ease: 'power1.inOut', opacity: 0, stagger: {from: "end", each: .1}}, "-=.9")
+    .to('.s8 .img-thumbs .img span', {duration:1.1, ease: 'power1.inOut', top: "100%", stagger: {from: "end", each: .1}}, "<")
+    .from('.s8 .img-thumbs .img img', {duration:1.1, ease: 'power1.inOut', scale: 1.4, stagger: {from: "end", each: .1}}, "<");
     const s8Waypoint = new Waypoint({
       element: document.querySelector('.s8'),
       handler: () => {
         s8.play();
         s8Waypoint.destroy();
       },
-      offset: '60%'
+      offset: '75%'
     });
   
     // Z4 Animation
     gsap.set('.z4 .images .img-reveal span', {display: 'none'})
     const z4 = gsap.timeline({paused: true});
-    z4.from('.z4 .bg-img', {duration: 1, ease: 'power2.inOut', opacity: 0}, "<")
-    z4.to('.z4 .bg-img span', {duration: 1, ease: 'power2.inOut', x: "-100%"}, "<")
-    z4.from('.z4 .bg-img img', {duration: 1, ease: 'power2.inOut', scale: 1.4}, "<")
-    z4.from('.z4 .img--2 img', {duration: .6, ease: 'power2.out', x: "100%", opacity: .5}, "-=.6")
-    z4.from('.z4 .img--1 img', {duration: .6, ease: 'power2.out', x: "100%", opacity: .5}, "-=.4")
-    z4.from('.z4 .text > *', {duration: .5, ease: 'power1.out', opacity: 0, x: -50, stagger: .1}, "-=.8")
+    z4.from('.z4 h2 span', {duration: 1, ease: 'power1.inOut', opacity: 0, y: "100%", stagger: .2}, "<")
+    z4.from('.z4 .img--2 img', {duration: 1, ease: 'power1.out', x: "100%", opacity: .5}, "-=.8")
+    z4.from('.z4 .img--1 img', {duration: 1, ease: 'power1.out', x: "100%", opacity: .5}, "-=.8")
     const z4Waypoint = new Waypoint({
       element: document.querySelector('.z4'),
       handler: () => {
         z4.play();
         z4Waypoint.destroy();
       },
-      offset: '70%'
+      offset: '75%'
     });
   
     // Footer Animation
     const footer = gsap.timeline({paused: true});
-    footer.from('.footer .container-lg > *', {duration: .5, ease: 'power0', opacity: 0, stagger: .25});
+    footer.from('.footer .container-lg > *', {duration: .8, ease: 'power1.inOut', opacity: 0, y: "100%", stagger: .15});
     const footerWaypoint = new Waypoint({
       element: document.querySelector('.footer'),
       handler: () => {
@@ -138,10 +126,11 @@ window.addEventListener('load', (event) => {
       },
       offset: '70%'
     });
+
   } else {
     gsap.timeline()
-    .from('.header', {duration: 1, ease: 'power2.inOut', opacity: 0, delay: 1.5})
-    .from('.page-wrapper', {duration: 1, ease: 'power2.inOut', opacity: 0}, "<");
+    .from('.header', {duration: 1, ease: 'power1.inOut', opacity: 0, delay: 1.5})
+    .from('.page-wrapper', {duration: 1, ease: 'power1.inOut', opacity: 0}, "<");
   }
 
   /* #Mobile menu
