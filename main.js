@@ -104,8 +104,8 @@ window.addEventListener('load', (event) => {
     gsap.set('.z4 .images .img-reveal span', {display: 'none'})
     const z4 = gsap.timeline({paused: true});
     z4.from('.z4 h2 span', {duration: 1, ease: 'power1.inOut', opacity: 0, y: "100%", stagger: .2}, "<")
-    z4.from('.z4 .img--2 img', {duration: 1, ease: 'power1.out', x: "100%", opacity: .5}, "-=.8")
-    z4.from('.z4 .img--1 img', {duration: 1, ease: 'power1.out', x: "100%", opacity: .5}, "-=.8")
+    z4.from('.z4 .img--2 img', {duration: .8, ease: 'power1.out', x: "100%", opacity: .5}, "-=.6")
+    z4.from('.z4 .img--1 img', {duration: .8, ease: 'power1.out', x: "100%", opacity: .5}, "-=.6")
     const z4Waypoint = new Waypoint({
       element: document.querySelector('.z4'),
       handler: () => {
